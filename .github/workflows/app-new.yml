@@ -1,19 +1,19 @@
 name: EXECUTING CI-CD USING GITHUB-ACTIONS
 on: push
 jobs:
-  First-job:
-  runs-on: ubuntu-latest
-  strategy:
-    matrix:
-      my-version: [3.8, 3.9]
-  steps:
-    - name: checkout the repository into ubuntu machine
-      uses: actions/checkout@v7
-    - name: setup-python
-      uses: actions/setup-python@v7
-      with:
-        python-version: ${{matrix.myversion}}
-    - name: know the present working directory
-      run: pwd
-    - name: Running the script in python
-      run: python3 app.py
+  first-job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        my-version: [3.8, 3.9]
+    steps:
+      - name: checkout the repository into ubuntu machine
+        uses: actions/checkout@v7
+      - name: setup-python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{matrix.my-version}}
+      - name: know the present working directory
+        run: pwd
+      - name: Running the script in python
+        run: python3 app.py
