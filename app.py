@@ -4,4 +4,3 @@ b=3
 print(a+b)
 print("****************HURAAH, CI-CD IS DONE****************************************")
 print("END OF THE SCRIPT")
-print("THE END")
