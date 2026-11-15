@@ -1,1 +1,15 @@
-
+name : pipeline_github_action
+on : push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+	      - name: checkout the repository
+	        uses: actions/checkout@v7
+        - name: starting the pipeline
+          run: echo "Hi, pipeline in progress"
+        - name: present working directory
+          run: pwd
+        - name: running the script
+          run: python3 app.py
+      
